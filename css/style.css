@@ -1,0 +1,218 @@
+div#content div{
+    display: inline-block;
+}
+
+.left{
+    float: left;
+    color: black;
+}
+.right{
+    float: right;
+    color: white;
+}
+.center{
+    display:inline-block;
+    text-align: center;
+}
+.center.img{
+    position: relative;
+    margin: 0 auto;
+}
+.img{
+    width: 1500px;
+    height:500px;
+}
+.text{
+    color: black;
+}
+.text.img1{
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    margin-bottom: 2cm;
+    color: rgb(43, 42, 42);
+}
+.text.img2{
+    position: absolute;
+    top: 150%;
+    width: 43%;
+    margin-bottom: 2cm;
+    color: rgb(43, 42, 42);
+
+}
+.text.img3{
+    position: absolute;
+    top: 285%;
+    width: 34%;
+    color: rgb(43, 42, 42);
+}
+#image:hover{
+    transition: all 1s ease-in;
+    filter: blur(6px);
+}
+/* ----------------------------------------------------------------------------- */
+.nopoint{
+    list-style-type: none;
+}
+nav.menu-nav ul li.btn{
+    display: inline-block;
+    list-style-type: none;
+    width: 200px;
+}
+nav.menu-nav ul li.btn a{
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+nav.menu-nav ul li.btn:hover a{
+    color: white;
+    background-color: grey;
+    transition: 0.5s all;
+}
+/* ----------------------------------------------------------------------------- */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+/* ------------------------------ menu deroulant -------------------------------- */
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: grey;
+    width: 100%;
+    
+}
+nav > ul li:hover .sous{
+    display: block;
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+.btn.deroulant > a::after{
+    content:" ▼";
+    font-size: 6px;
+}
+/*------------------------------- aspect boutton --------------------------------*/
+div.btn-container i{
+    display: inline-block;
+    position: relative;
+    top: -9px;
+}
+label {
+    font-size: 13px;
+    color: #424242;
+    font-weight: 500;
+}
+.btn-color-mode-switch{
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+.btn-color-mode-switch > label.btn-color-mode-switch-inner{
+    margin: 0px;
+    width: 140px;
+    height: 30px;
+    background: #E0E0E0;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+    display: block;
+}
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
+    content: attr(data-on);
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    top: 7px;
+    right: 20px;
+
+}
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
+    content: attr(data-off);
+    width: 70px;
+    height: 16px;
+    background: #fff;
+    border-radius: 26px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px #111;
+    padding: 5px 0px;
+}
+.btn-color-mode-switch input[type="checkbox"]{
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin: 0px;
+}
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+    background: #151515;
+    color: #fff;
+}
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
+    content: attr(data-on);
+    left: 68px;
+    background: #3c3c3c;
+}
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
+    content: attr(data-off);
+    right: auto;
+    left: 20px;
+}
+.white-preview div.btn-container i.fa-sun-o{
+    color: #ffa500;
+    text-shadow: 0px 0px 16px #ffa500;
+}
+/* ------------------------------ transition ----------------------------------- */
