@@ -79,7 +79,6 @@ nav.menu-nav ul li.btn:hover a{
 nav{
     width: 100%;
     margin: 0 auto;
-    background-color: white;
     position: sticky;
     top: 0px;
 }
@@ -88,7 +87,7 @@ nav ul{
 }
 nav ul li{
     float: left;
-    width: 25%;
+    width: 100%;
     text-align: center;
     position: relative;
 }
@@ -111,17 +110,16 @@ nav a:hover{
 /* ------------------------------ menu deroulant -------------------------------- */
 .sous{
     display: none;
-    box-shadow: 0px 1px 2px #CCC;
+    box-shadow: 0px 1px 1px #CCC;
     background-color: grey;
-    width: 100%;
-    
+    width: 100%;   
 }
 nav > ul li:hover .sous{
     display: block;
 }
 .sous li{
     float: none;
-    width: 100%;
+    width: 10%;
     text-align: left;
 }
 .sous a{
@@ -130,13 +128,13 @@ nav > ul li:hover .sous{
 }
 .sous a:hover{
     border-bottom: none;
-    background-color: RGBa(200,200,200,0.1);
+    background-color:rgb(104, 104, 104);
 }
 .btn.deroulant > a::after{
     content:" ▼";
-    font-size: 6px;
+    font-size: 10px;
 }
-/*------------------------------- aspect boutton --------------------------------*/
+/*------------------------------- aspect switch gris/blanc --------------------------------*/
 div.btn-container i{
     display: inline-block;
     position: relative;
