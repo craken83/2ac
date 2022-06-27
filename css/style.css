@@ -70,7 +70,7 @@ nav.menu-nav ul li.btn:hover a{
     background-color: grey;
     transition: 0.5s all;
 }
-/* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------- menu Contact/Projets/Accueil ------------------------------------------------------ */
 *{
     margin: 0px;
     padding: 0px;
@@ -89,7 +89,6 @@ nav ul li{
     float: left;
     width: 100%;
     text-align: center;
-    position: relative;
 }
 nav ul::after{
     content: "";
@@ -108,33 +107,39 @@ nav a:hover{
     border-bottom: 2px solid gold;
 }
 /* ------------------------------ menu deroulant -------------------------------- */
-.sous{
-    display: none;
-    box-shadow: 0px 1px 1px #CCC;
-    background-color: grey;
-    width: 100%;   
-}
-nav > ul li:hover .sous{
-    display: block;
-}
-.sous li{
-    float: none;
-    width: 10%;
-    text-align: left;
-}
-.sous a{
-    padding: 10px;
-    border-bottom: none;
-}
+#menu-demo2 ul{
+    position:absolute;
+    max-height:0;
+    left: 0;
+    right: 0;
+    overflow:hidden;
+    -moz-transition: .8s all;
+    -webkit-transition: .8s all;
+    transition: .8s all;
+    }
+    #menu-demo2 li:hover ul{
+    max-height:15em;
+    }
+    #menu-demo2 li{
+    display:inline-block;
+    position:relative;
+    border-radius:8px 8px 0 0;
+    }
 .sous a:hover{
     border-bottom: none;
     background-color:rgb(104, 104, 104);
 }
 .btn.deroulant > a::after{
+    content: " ◀";
+    font-size: 10px;
+
+}
+.btn.deroulant > a:hover::after{
     content:" ▼";
     font-size: 10px;
+    position: absolute;
 }
-/*------------------------------- aspect switch gris/blanc --------------------------------*/
+/*---------------------------------------------------------------------------- aspect switch gris/blanc -----------------------------------------------------------------------------*/
 div.btn-container i{
     display: inline-block;
     position: relative;
@@ -214,3 +219,4 @@ label {
     text-shadow: 0px 0px 16px #ffa500;
 }
 /* ------------------------------ transition ----------------------------------- */
+
